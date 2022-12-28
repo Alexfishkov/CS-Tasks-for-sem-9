@@ -4,8 +4,14 @@
 
 Console.Clear();
 Console.WriteLine("Выведем все натуральные числа в промежутке от N до 1");
-Console.Write("Введите ваше N=>");
-int yourNumber = Convert.ToInt32(Console.ReadLine());
+int yourNumber = 0;
+do
+{
+    Console.Write("Введите ваше N(>=1)=>");
+    yourNumber = Convert.ToInt32(Console.ReadLine());
+    if (yourNumber <= 0) Console.WriteLine("Ошибка при вводе N. Введите N>0 ");
+
+} while (yourNumber <= 0);
 
 void NumbersDesc(int n)
 {
